@@ -9,41 +9,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 
-  <script>
-
-    function populate(s1,s2){
-
-      var s1 =  document.getElementById(s1);
-      var s2 =  document.getElementById(s2);
-
-      s2.innerHTML = "";
-      if (s1.value== 'Chevy'){
-        var optionArray = ['|', "camero|Camero", 'corvette|Corvette', "impala|Impala"];
-        console.log(optionArray);
-      }
-      else if(s1.value == "Dodge"){
-        var optionArray = ['|', "viper|Viper", 'ram|Ram', "charger|Charger"];
-        console.log(optionArray);
-      } else if(s1.value == "Ford"){
-        var optionArray = ['|', "mustang|Mustang", 'focus|Focus', "fusion|Fusion"];
-        console.log(optionArray);
-      }
-
-
-
-      for(var option in optionArray){
-        var pair = optionArray[option].split("|");
-        var newOption = document.createElement('option');
-        newOption.value = pair[0];
-        newOption.innerHTML = pair[1];
-        s2.options.add(newOption);
-
-      }
-
-
-    }
-
-  </script>
+ 
 </head>
 <body>
 
@@ -53,9 +19,7 @@
     <div id="quote-box">
       <p class="skill">Amazing Multi Talented Web Programmer</p>
       <p class="category">Full Stack Web Development<span class="citation">Making It All Work</span><span class="year">2009</span></p>
-      <p class="responsibility"></p>
-      <div id="showArray"></div>
-      <div id="showObject"></div>
+     
 
 
     </div>
@@ -63,9 +27,7 @@
     <button id="loadEducation">Show Education</button>
     <button id="loadExperience">Show Experience</button>
     <button id="loadAchievements">Show Achievements</button>
-    <button id="loadArray">Load Array</button>
-    <button id="loadArrayA">Load Array</button>
-    <button id="loadObject">Load Object</button>
+   
 
    <!-- <button id="ajax">Ajax</button>  -->
 
@@ -73,70 +35,14 @@
 
   </div>
 
-  <div id="showArray"></div>
-  <div id="showArrayA"></div>
-
-
-<hr>
-Choose Car Make:
-
-<select id="slct1" name="slct1" onchange="populate('slct1', 'slct2')">
-
-  <option value=""></option>
-  <option value="Chevy">Chevy</option>
-  <option value="Dodge">Dodge</option>
-  <option value="Ford">Ford</option>
-
-</select>
-
-<hr>
-
-Choose Car Model:
-
-<select id="slct2" name="slct2">
-
   
 
-</select>
-
-<hr>
-
-
-<form>
-
-  <label for="first">First</label>
-  <input type="checkbox" value="first" id="first">
-  <label for="second">Second</label>
-  <input type="checkbox" value="second" id="second" > 
-  <label for="third">Third</label>
-  <input type="checkbox" value="third" id="third">
-  <label for="fourth">Fourth</label>
-  <input type="checkbox" value="fourth" id="fourth">
-  <label for="fifth">Fifth</label>
-   <input type="checkbox" value="fifth" id="fifth">
-   <label for="sixth">Sixth</label>
-  <input type="checkbox" value="sixth" id="sixth"> 
-  <label for="seventh">Seventh</label>
-  <input type="checkbox" value="seventh" id="seventh">
-  <label for="eighth">Eighth</label>
-  <input type="checkbox" value="eighth" id="eighth">
-  <label for="ninth">Ninth</label>
- <input type="checkbox" value="ninth" id="ninth">
-
- <label for="tenth">Tenth</label>
-  <input type="checkbox" value="tenth" id="tenth">
 
 
 
-</form>
 
-   <script>
-$(document).ready(function(){
-    $("#ajax").click(function(){
-        $("#div1").load("ajax.txt");
-    });
-});
-</script>
+
+  
   <script src="js/script.js"></script>
 </body>
 </html>
